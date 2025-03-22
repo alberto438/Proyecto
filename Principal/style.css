@@ -1,237 +1,243 @@
-body { 
-  background-image: url(Fondo.jpg);
-  background-position: center;
-  background-repeat: no-repeat;
+body {                      
+                                                        /* Coloco la url, con un size de cover y lo convierto en flex para poder ordenar los items en columnas */
+  background-image: url(/Assets/Fondo.jpg);
   background-size: cover;
   display: flex;
   flex-direction: column;
   margin:0;
 }
 
-.navbar {
-  overflow: hidden;
-  background-color: rgba(0, 0, 0, 0.7);
-  height: 50px;
-  top: 0;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  }
+    .navbar {
+                                                            /* Coloco el overflow para que el logo tenga aire por arriba, un color discreto, le doy cierta altura con height y la anchura completa con width y lo situo en lo mas alto con top:0, lo convierto en un contenedor flex y space between para que los elementos se alineen por los extremos */
+      overflow: hidden;
+      background-color: rgba(0, 0, 0, 0.7);
+      height: 50px;
+      top: 0;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      }
 
-.navbar a {
-  float: left;
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 20px;
-  text-decoration: none;
-  transition: background-color 0.3s;
-}
+      .navbar a {
+                                                              /* Aquí doy estilo a los botones, haciéndolo colocarse en la posición que busco, distanciandolos del resto de elementos de la navbar, dandole color a las letras y eliminando el subrayado, preparando el camino para la transicion de color  */
+        float: left;
+        color: white;
+        text-align: center;
+        padding: 14px 20px;
+        text-decoration: none;
+        transition: background-color 0.3s;
+      }
 
-.navbar a:hover {
-  background-color: #ddd;
-  color: black;
-}
+      .navbar a:hover {
+                                                                  /* Aqui marco la transicion del background color */
+        background-color: #ddd;
+        color: black;
+      }
 
-.logo{
-  height: 40px;
-  width: 40px;
-  padding-left: 20px;
-  padding-top: 5px;
-}
-.logoname{
-  font-family: Georgia, 'Times New Roman', Times, serif;
-  font-size: 14px;
-}
-.logot{
-  display: flex;
-  justify-items: center;
-  flex-direction: row;
-  padding-left: 20px;
-  color: rgb(83, 5, 5);
-}
-.content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  height: 200px;
-  width: 100%;
-  box-shadow: 0 0 20px rgba(52, 73, 94, 0.5);
-  border-radius: 10px;
-  margin-top: 80px;
-  position: relative;
-}
-
-.content::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url(tira.jpg);
-  background-size: cover;
-  background-position: center;
-  opacity: 0.5;
-  z-index: 1;
-  overflow: hidden;
-}
-
-  .textos1{
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    width: 100%;
-    height: 100px;
-    position: relative;
-    z-index: 2;
-  }
-  #conferencia{
-    
-    font-family: 'Playfair Display', serif;
-    font-size: 3em;
-    color: #ffffffd0; 
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-    margin-bottom: 20px;
-    text-shadow:
-        -5px 0 black, 
-        0 1px black,
-        1px 0 black, 
-        0 -1px black;
-  }
-  #bienvenida{
-    font-family: 'Roboto', sans-serif;
-    font-size: 1.5em;
-    color: #4e4e4e; 
-    font-weight: 400;
-    letter-spacing: 1px;
-    text-shadow:
-        -1px 0 black, 
-        0 1px black,
-        1px 0 black, 
-        0 -1px black;
-  }
-
-.secciones{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between
-
-}
-  #izq{
-    display: flex;  
-    flex-direction: column;
-    justify-items: left;
-    width: 30%;
-    padding: 20px;
-    margin: 10px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    background-color: rgba(173, 216, 230, 0.7);
-    margin-bottom: 20px;
-    opacity: 0.5;
-    z-index: 2;
-  }
-    #descripcion{
-      font-family: 'Playfair Display', serif;
-      font-size: 12px; 
-      color: #000000; 
-      text-align: center; 
-      margin-bottom: 20px; 
-      text-align: left;
-      background-color: rgb(44, 85, 85);
-      border-radius: 5% 5%;
-      border: 2px outset rgb(51, 51, 51);
-      padding: 10px;
-      z-index: 1;
-     
-      
-    }
-      .personajes{
+          .logo{                                                  
+                                                                       /* Esto es el logo, marcando cnhura y altura ademas de añadirle relleno al contenedor */ 
+            height: 40px;
+            width: 40px;
+            padding-left: 20px;
+            padding-top: 5px;
+          }
+          .logoname{  
+                                                                        /* Este es el estilo de letras del acompañante del logo */
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-size: 14px;
+            color: #530202;
+          }
+          .logot{                                                        
+                                                                          /* El contenedor de logo y letras con display flex y row para que se alineen en fila */
+            display: flex;
+            justify-items: center;
+            flex-direction: row;
+          }
+      .content {
+                                                                            /* Convierto la tira en un flex para alinear su contenido en columnas, le doy anchura maxima y altura, los separo de contenedor posterior y anterior y una posicion relativa para que no se monte sobre ningún otro. */
         display: flex;
         flex-direction: column;
-        text-align: left;
         align-items: center;
+        height: 200px;
+        width: 100%;
+        /* box-shadow: 0 0 20px rgba(52, 73, 94, 0.5); */
+        /* border-radius: 10px; */
+        margin-top: 50px;
+        margin-bottom: 50px;
+        position: relative;
       }
-      .galeria{
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: 15px;
-        padding: 10px;
-        }
-      .fotografias{
-        border: 1px solid #000000; /* Color dorado */
-        border-radius: 5px; /* Redondea las esquinas */
-        box-shadow: 0 0 5px rgba(255, 215, 0, 0.5); /* Sombra dorada */
-      }
-        .fotografias img {
-          width: 50px;
-          height: 60px;
-          object-fit: cover;
-          display: flex;
-          align-items: center;
-        }
-        .fotografias p {
-          margin-top: 5px;
-          text-align: center;
-          font-size: 10px;
-        }
-        .fotografias:hover {
-          transform: scale(1.1);
+ 
+       .content::before {
+                                                                                /* Con este selector, me permito trabajar sobre la tira sin modificar la opacidad de los textos.                                   */
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-image: url(/Assets/tira.jpg);
+        opacity: 0.5;
 
-        }
+      } 
+
+          .textos1{
+                                                                            /* Lo convierto en flex para porder colocarlo y le doy una altura y la anchura maxima permitida dentro de su contenedor para la simetria y con el z index 2 subo los textos en altura para que no les afecte la opacidad de la tira */
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            width: 100%;
+            height: 100px;
+            z-index: 2;
+          }
+          #conferencia{
+                                                                                /* Caracteristicas de las letras y un sombreado que le aporta cuerpo */
+            font-family: 'Playfair Display', serif;     
+            font-size: 3em;
+            color: #ffffffd0; 
+            margin-bottom: 20px;
+            text-shadow:
+                -5px 0 black, 
+                0 1px black,
+                1px 0 black, 
+                0 -1px black;
+          }
+          #bienvenida{
+                                                                                    /* Caracteristicas de las letras y un sombreado que le aporta cuerpo */
+            font-family: 'Roboto', sans-serif;
+            font-size: 1.5em;
+            color: #4e4e4e; 
+            font-weight: 400;
+            letter-spacing: 1px;
+            text-shadow:
+                -1px 0 black, 
+                0 1px black,
+                1px 0 black, 
+                0 -1px black;
+          }
+
+    .secciones{
+                                                                                  /* Le doy al contenedor de izq y der flexibilidad para que se situen en fila de manera simétrica */
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+        #izq{
+                                                                                    /* Lo convierto en contenedor flex, ordenado en columnas, una anchura del 30 % junto con el el 30% del contenedro der. junto con el space between para que haya espacio entre ello y el margin para que tenga espacio con la pantalla, el padding para que su interior tenga relleno */
+          display: flex;  
+          flex-direction: column;
+          width: 30%;
+          padding: 20px;
+          margin: 10px;
+          border-radius: 10px;
+          box-shadow: 0 4px 10px rgba(0, 0, 0);
+          background-color: rgba(173, 216, 230, 0.5);
         
-  #der{
-    display: flex;  
-    flex-direction: column;
-    justify-items: center;
-    align-items: center;
-    width: 30%;
-    padding: 20px;
-    margin: 10px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    background-color: rgba(173, 216, 230, 0.7);
-    margin-bottom: 20px;
-  }
-    .lista{
-      font-family: 'Playfair Display', serif;
-      font-size: 10px; 
-      color: #000000; 
-      margin-bottom: 20px; 
-      text-align: left;
-      background-color: rgb(44, 85, 85);
-      border-radius: 5% 5%;
-      border: 2px inset rgb(51, 51, 51);
-      padding: 20px;
-    }
-    .grafica{
-      width: 250px;
-      height: 150px;
-      border: 1px solid #000000; 
-      border-radius: 5px; 
-      box-shadow: 0 0 5px rgba(255, 215, 0, 0.5); 
-      transition: transform 1s ease;
-    }
-    .grafica:hover {
-      transform: translateX(-200px) scale(1.5);
-
-    }
-    .inversion{
-      text-align: center;
-    }
- .talon {
-      background-color: #333;
-      color: #fff;
-      text-align: center;
-      position: relative;
-      width: 100%;
-      height: 80px;
-    }
-  .pie{
-    font-size: 12px;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-  }
+        
+      }
+            #descripcion{
+                                                                                    /* Le doy estilo , lo alineo, lo separo de las fotos y le creo relleno con el contenedor, le aporto color, esquinas curvas y transparencia y un borde en sombra */
+              font-family: 'Playfair Display', serif;
+              font-size: 12px; 
+              color: #000000; 
+              margin-bottom: 20px; 
+              background-color: rgb(44, 85, 85, 0.5);
+              border-radius: 5% 5%;
+              border: 2px outset rgb(51, 51, 51);
+              padding: 10px;
+        }
+            .personajes{
+                                                                                  /* Convierto en contenedor flex para presentar texto y fotografias en columnas y alineo texto y contenedores en el centro */
+              display: flex;
+              flex-direction: column;
+              text-align: left;
+              align-items: center;
+            }
+                .galeria{
+                                                                                    /* Lo convierto en grid para fornmar 4 colunmnas con 2 filas, le doy separacion entre fotos con el gap. */
+                  display: grid;
+                  grid-template-columns: repeat(4, 1fr);
+                  gap: 15px;
+                  }
+                    .fotografias{
+                                                                                          /* Le doy estilo a las fotografias con un marco, un sombreado y recortando las esquinas */
+                      border: 1.5px solid #000000;
+                      border-radius: 5px;
+                      box-shadow: 0 0 5px rgba(255, 215, 0, 0.5);
+                      transition: transform 0.3s ease;
+                      background-color: rgb(189, 71, 150);
+                      
+                    }
+                    .fotografias img {      
+                                                                                                    /* Le doy tamaño a las fotografias */
+                      width: 100%;
+                      height: 60px;
+                    }
+                    .fotografias p {
+                                                                                              /* Centro fotografias y le doy tamaño al texto que las acompaña     */
+                      text-align: center;
+                      font-size: 10px;
+                    }
+                    .fotografias:hover {
+                                                                                                /* Concreto la transición de cambio de color y de tamaño que quiero darle a las fotografias */
+                      transform: scale(1.1);
+                      background-color: aqua;
+                    }
+            
+        #der{
+                                                                                                 /* Lo convierto en contenedor flex, ordenado en columnas, una anchura del 30 % junto con el el 30% del contenedor izq. junto con el space between para que haya espacio entre ello y el margin para que tenga espacio con la pantalla, el padding para que su interior tenga relleno */                                                    
+          display: flex;  
+          flex-direction: column;
+          justify-items: center;
+          align-items: center;
+          width: 30%;
+          padding: 20px;
+          margin: 10px;
+          border-radius: 10px;
+          box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+          background-color: rgba(173, 216, 230, 0.7);
+          margin-bottom: 20px;
+        }
+            .lista{
+                                                                              /* Estilo a las letras, margin con el contenedor de abajo, alineadas a la izquierda, relleno, borde y transparencia y color de fondo */
+              font-family: 'Playfair Display', serif;
+              font-size: 10px; 
+              color: #000000; 
+              margin-bottom: 20px; 
+              background-color: rgb(44, 85, 85, 0.5);
+              border-radius: 5% 5%;
+              border: 2px inset rgb(51, 51, 51);
+              padding: 20px;
+            }
+            .grafica{
+                                                                                /* Le doy el tamaño que busco, un borde que la encuadre, redondeo las esquinas y la preparo para el hover */
+              width: 250px;
+              height: 150px;
+              border: 1px solid #000000; 
+              border-radius: 5px; 
+              transition: transform 1s ease;
+            }
+            .grafica:hover {
+                                                                                  /* Hover discreto de aumento de tamaño */
+              transform: translateX(-200px) scale(1.5);
+            }
+            .inversion{
+                                                                                    /* Alineo las letras y les doy tamaño */
+              text-align: center;
+              font-size: 13px;
+            }
+    .talon {   
+                                                                                     /* Le doy color a letras y fondo, las coloco en el centro y le doy tamaño al footer */
+          background-color: #333;
+          color: #fff;
+          text-align: center;
+          position: relative;
+          width: 100%;
+          height: 80px;
+        }
+           .pie{                                                                        
+                                                                                           /* Coloco los dos textos en columna, en el centro y le doy el tamaño que quiero a las letras  */
+            font-size: 12px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+          }

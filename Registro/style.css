@@ -1,14 +1,14 @@
-body {
-    background-image: url(/Principal/Fondo.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    display: flex;
-    flex-direction: column;
-    margin:0;
-  }
-  
-  .navbar {
+body {                      
+                                                                    /* Coloco la url, con un size de cover y lo convierto en flex para poder ordenar los items en columnas */
+background-image: url(/Assets/Fondo2.jpg);
+background-size: cover;
+display: flex;
+flex-direction: column;
+margin:0;
+}
+
+    .navbar {
+                                                                      /* Coloco el overflow para que el logo tenga aire por arriba, un color discreto, le doy cierta altura con height y la anchura completa con width y lo situo en lo mas alto con top:0, lo convierto en un contenedor flex y space between para que los elementos se alineen por los extremos */
     overflow: hidden;
     background-color: rgba(0, 0, 0, 0.7);
     height: 50px;
@@ -17,96 +17,122 @@ body {
     display: flex;
     justify-content: space-between;
     }
-  
-  .navbar a {
+
+    .navbar a {
+                                                                        /* Aquí doy estilo a los botones, haciéndolo colocarse en la posición que busco, distanciandolos del resto de elementos de la navbar, dandole color a las letras y eliminando el subrayado, preparando el camino para la transicion de color  */
     float: left;
-    display: block;
     color: white;
     text-align: center;
     padding: 14px 20px;
     text-decoration: none;
     transition: background-color 0.3s;
-  }
-  
-  .navbar a:hover {
+    }
+
+    .navbar a:hover {
+                                                                        /* Aqui marco la transicion del background color */
     background-color: #ddd;
     color: black;
-  }
-  
-  .logo{
-    height: 40px;
-    width: 40px;
-    padding-left: 20px;
-    padding-top: 5px;
-  }
-  .logoname{
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 14px;
-  }
-  .logot{
+    }
+
+          .logo{                                                  
+                                                                                /* Esto es el logo, marcando cnhura y altura ademas de añadirle relleno al contenedor */ 
+          height: 40px;
+          width: 40px;
+          padding-left: 20px;
+          padding-top: 5px;
+          }
+          .logoname{  
+                                                                              /* Este es el estilo de letras del acompañante del logo */
+          font-family: Georgia, 'Times New Roman', Times, serif;
+          font-size: 14px;
+          color: #530202;
+          }
+          .logot{                                                        
+                                                                                /* El contenedor de logo y letras con display flex y row para que se alineen en fila */
+          display: flex;
+          justify-items: center;
+          flex-direction: row;
+          }
+    .apartados{
+                                                                      /* Colocoo diplay flex para que sea un contenedor flexible y poder aplicar alineacion en fila para que aparezca uno al lado de otro ocupando todo el espacio disponible con space between */
     display: flex;
-    justify-items: center;
     flex-direction: row;
-    padding-left: 20px;
-    color: rgb(83, 5, 5);
-  }
-
-
-#grupo {
-    background-color: rgb(95, 104, 187);
-    padding: 20px;
-    margin: 20px;
-    border-radius: 20px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    width: 300px;
+    justify-content: space-between;
+    }
     
-}
+          #grupo {
+                                                                        /* Le doy a la primera seccion color y transparencia, relleno y margen, la anchura deseada y esquinas redondeadas  */
+            background-color: rgb(95, 104, 187, 0.5);
+            padding: 20px;
+            margin: 20px;
+            border-radius: 20px;
+            width: 300px;
+            display: flex;
+            flex-direction: column;
 
-.grupo {
-  margin-bottom: 15px;
-}
+          }
+          
+                .grupo {
+                                                                        /* Le doy al contenedor margin bottom para que los label aparezcabn separados, una alineacion vertical central  */
+                  margin-bottom: 15px;
+                  vertical-align: middle;
+                }
 
-h2 {
-    text-align: center;
-    color: #333;
-}
+                input, textarea {
+                                                                        /* Este marcador afecta a todos los text area y les da la anchrura maxima, separacion con box-sizing border box,borde y curvatura en las esquinas */
+                  width: 100%;
+                  border: 1px solid #ddd;
+                  border-radius: 4px;
+                  box-sizing: border-box; 
+                 }
+                 textarea {
+                                                                          /* Este marcador me permite darle la anchura deseado al area concreta del emplazamiento de los comentarios */
+                  height: 70px;
 
-label {
-    display: block;
-    margin-bottom: 5px;
-    color: #666;
-}
+                 }
+                 .h3{
+                                                                            /* Oscurezco las letras del checkbox porque se ven demasiado claras respecto al resto */
+                  color: black;
+                 }
+              .tratamiento{
+                background-image: url(/Assets/Tratamiento-de-Datos.jpg);
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: center;
+                height: 100%;
+                width: 100%;
+                margin-top: 15px; 
+                border-radius: 5%;
+                transition: transform 1s ease;         
+              }    
+                    .tratamiento:hover {
+                                                                            /* Hover suficiente para ver la imagen completa */
+                    transform: translate(200px, -200px) scale(2.5);
+                    }   
+          .secciones{
+                                                                              /* Aplico a mis dos secciones un display column para que aparezcan sus elementos uno debajo del otro. */
+            display: flex;
+            flex-direction: column; 
+          }
+                #grupo2 { 
+                                                                              /* Le doy a la segunda seccion color y transparencia, relleno y margen, la anchura deseada y esquinas redondeadas  */
+                  background-color: rgb(95, 104, 187, 0.5);
+                  padding: 20px;
+                  margin: 20px;
+                  border-radius: 20px;
+                  width: 300px;
+                }
 
-input, textarea {
-    width: 100%;
-    padding: 8px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    box-sizing: border-box;
-}
+                        .botones{
+                                                                              /* Separo los botones de enviar y borrar de la parte superior */
+                          margin-top: 20px;
+                        }
 
-textarea {
-    height: 100px;
-    resize: vertical;
-}
-
-.buttons {
-    width: 100%;
-    padding: 10px;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 16px;
-}
-
-button:hover {
-    background-color: #45a049;
-}
 
 
 
   .talon {
+                                                                                /* Le doy color a letras y fondo, las coloco en el centro y le doy tamaño al footer */
     background-color: #333;
     color: #fff;
     text-align: center;
@@ -115,6 +141,7 @@ button:hover {
     height: 80px;
   }
 .pie{
+                                                                                  /* Coloco los dos textos en columna, en el centro y le doy el tamaño que quiero a las letras  */
   font-size: 12px;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   display: flex;

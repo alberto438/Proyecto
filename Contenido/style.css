@@ -1,60 +1,135 @@
-body {
-    background-image: url(/Principal/Fondo.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    display: flex;
-    flex-direction: column;
-    margin:0;
-  }
-  
-  .navbar {
-    overflow: hidden;
-    background-color: rgba(0, 0, 0, 0.7);
-    height: 50px;
-    top: 0;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    }
-  
-  .navbar a {
-    float: left;
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 20px;
-    text-decoration: none;
-    transition: background-color 0.3s;
-  }
-  
-  .navbar a:hover {
-    background-color: #ddd;
-    color: black;
-  }
-  
-  .logo{
-    height: 40px;
-    width: 40px;
-    padding-left: 20px;
-    padding-top: 5px;
-  }
-  .logoname{
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 14px;
-  }
-  .logot{
-    display: flex;
-    justify-items: center;
-    flex-direction: row;
-    padding-left: 20px;
-    color: rgb(83, 5, 5);
-  }
-  
+body {                      
+                                                                             /* Coloco la url, con un size de cover y lo convierto en flex para poder ordenar los items en columnas */
+background-image: url(/Assets/Fondo2.jpg);
+background-size: cover;
+display: flex;
+flex-direction: column;
+margin:0;
+}
 
+      .navbar {
+                                                                                          /* Coloco el overflow para que el logo tenga aire por arriba, un color discreto, le doy cierta altura con height y la anchura completa con width y lo situo en lo mas alto con top:0, lo convierto en un contenedor flex y space between para que los elementos se alineen por los extremos */
+      overflow: hidden;
+      background-color: rgba(0, 0, 0, 0.7);
+      height: 50px;
+      top: 0;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      }
 
+      .navbar a {
+                                                                          /* Aquí doy estilo a los botones, haciéndolo colocarse en la posición que busco, distanciandolos del resto de elementos de la navbar, dandole color a las letras y eliminando el subrayado, preparando el camino para la transicion de color  */
+      float: left;
+      color: white;
+      text-align: center;
+      padding: 14px 20px;
+      text-decoration: none;
+      transition: background-color 0.3s;
+      }
+
+      .navbar a:hover {
+                                                                          /* Aqui marco la transicion del background color */
+      background-color: #ddd;
+      color: black;
+      }
+
+            .logo{                                                  
+                                                                              /* Esto es el logo, marcando cnhura y altura ademas de añadirle relleno al contenedor */ 
+            height: 40px;
+            width: 40px;
+            padding-left: 20px;
+            padding-top: 5px;
+            }
+            .logoname{  
+                                                                              /* Este es el estilo de letras del acompañante del logo */
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-size: 14px;
+            color: #530202;
+            }
+            .logot{                                                        
+                                                                          /* El contenedor de logo y letras con display flex y row para que se alineen en fila */
+            display: flex;
+            justify-items: center;
+            flex-direction: row;
+            }
+        
+     #temas{
+                                                                          /* El contenedor principal del contenido presenta un display flex para poder colocar en filas los elemntos ademas de un margin-top para separarlo de la navbar */
+      display: flex;
+      flex-direction: row;
+      margin-bottom: 50px;
+      }  
+            .horario {
+                                                                          /* El grid del horario se divide en 2 columnas y 8 filas con un gap entre elementos de 10 px y un margen izquierdo con la pantalla */
+              display: grid;
+              grid-template-columns: repeat(2, 1fr);
+              grid-template-rows: repeat(8, 1fr);
+              row-gap: 10px;
+              margin-top: 50px;
+              margin-left: 50px;
+            }
+            
+             
+                  .hora{
+                                                                           /* Le doy tamaño al primer contenedor titular del grid, color, posicion, oscurezco las letras para diferenciaro y alineo su contenido al centro */
+                    width: 100px;
+                    height: 40px;
+                    background-color: rgb(121, 53, 223);
+                    text-align: center;
+                    font-weight: bold ;
+                    display: flex ;
+                    align-items: center;
+                    justify-content: center;
+                  }
+                  .planing{
+                                                                               /* Le doy tamaño al segundo contenedor titular del grid, color, posicion, oscurezco las letras para diferenciaro y alineo su contenido al centro */
+                    width: 200px;
+                    height: 40px;
+                    background-color: rgb(121, 53, 223);
+                    text-align: center;
+                    font-weight: bold ;
+                    display: flex ;
+                    align-items: center;
+                    justify-content: center;
+                  }
+                  .horas{
+                                                                                 /* Le doy tamaño a los contenedores de la primera colunmna del grid, color, posicion, oscurezco las letras para diferenciaro y alineo su contenido al centro */
+                    width: 100px;
+                    height: 40px;
+                    background-color: rgba(228, 252, 14, 0.8);
+                    border-radius: 10%;
+                    display: flex ;
+                    align-items: center;
+                    justify-content: center;
+                  } 
+                  .actividades{
+                                                                                  /* Le doy tamaño a los contenedores de la segunda colunmna del grid, color, posicion, oscurezco las letras para diferenciaro y alineo su contenido al centro */
+                    width: 200px;
+                    height: 40px;
+                    background-color: rgba(236, 110, 7, 0.5);
+                    border-radius: 10%;
+                    display: flex ;
+                    align-items: center;
+                    justify-content: center;
+                  }
+            .imagenes {
+                                                                                    /* Coloco un article para contener 3 imagenes que quiero una encima de otra separadas entre si por el gap y del borde izquierdo, derecho y superior */
+              display: flex ;
+              flex-direction: column;
+              margin-top: 50px;
+              margin-left: 25px;
+              margin-right: 50px;
+              gap: 20px;
+            }
+                    .fotos{
+                                                                                      /* Le doy tamaño a las imágenes que no consigo que respeten correctamente aun con indicaciones claras debido al tamaño original de las fotografías. */
+                      width: 100px;
+                      height: auto;
+                    }
 
   .talon {
+                                                                                    /* Le doy color a letras y fondo, las coloco en el centro y le doy tamaño al footer */
     background-color: #333;
     color: #fff;
     text-align: center;
@@ -62,13 +137,14 @@ body {
     width: 100%;
     height: 80px;
   }
-.pie{
-  font-size: 12px;
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-}
+          .pie{
+                                                                                    /* Coloco los dos textos en columna, en el centro y le doy el tamaño que quiero a las letras  */
+            font-size: 12px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+          }
 
 
 
