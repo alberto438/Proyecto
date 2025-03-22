@@ -69,7 +69,7 @@ margin:0;
             width: 300px;
             display: flex;
             flex-direction: column;
-
+            
           }
           
                 .grupo {
@@ -95,15 +95,17 @@ margin:0;
                   color: black;
                  }
               .tratamiento{
+                                                                            /* El background es la imagen de tratamiento de datos, le doy tamaño para que ocupe el 100% en ambas longitudes, le redondeo las esquinas a juego con el resto de la web y la separo del contenedor superior, la coloco en el centro del contenedor y la posiciono relativa para poder manejarla en el espacio ya que se me desencuadró de su posición después de un cambio necesario en la estructura del formulario */
                 background-image: url(/Assets/Tratamiento-de-Datos.jpg);
                 background-size: contain;
                 background-repeat: no-repeat;
                 background-position: center;
-                height: 100%;
-                width: 100%;
-                margin-top: 15px; 
+                height: 200px;
+                width: 300px;
                 border-radius: 5%;
-                transition: transform 1s ease;         
+                transition: transform 1s ease;   
+                
+                    
               }    
                     .tratamiento:hover {
                                                                             /* Hover suficiente para ver la imagen completa */
@@ -123,6 +125,23 @@ margin:0;
                   width: 300px;
                 }
 
+              #grupo2 { 
+                                                                              /* Le doy a la segunda seccion color y transparencia, relleno y margen, la anchura deseada y esquinas redondeadas  */
+                  background-color: rgb(95, 104, 187, 0.5);
+                  padding: 20px;
+                  margin: 20px;
+                  border-radius: 20px;
+                  width: 300px;
+                }
+                #grupo3 { 
+                                                                            /* Le doy a la segunda seccion color y transparencia, relleno y margen, la anchura deseada y esquinas redondeadas, la nombro como grupo3 para poder darle margen top y asi cuadrar las bases de la secciones iquierda y derecha  */
+                  background-color: rgb(95, 104, 187, 0.5);
+                  padding: 20px;
+                  margin: 20px;
+                  border-radius: 20px;
+                  width: 300px;
+                  margin-top: 50px;
+                  }
                         .botones{
                                                                               /* Separo los botones de enviar y borrar de la parte superior */
                           margin-top: 20px;
