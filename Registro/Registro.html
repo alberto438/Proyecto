@@ -43,9 +43,11 @@
                         <input type="tel" id="telefono" name="telefono" pattern="[0-9]{9}" maxlength="9" minlength="9" placeholder="Ingrese 9 dígitos" required>
                         <label for="direccion">Dirección</label>
                         <input type="direccion" id="direccion" name="direccion" placeholder="direccion" patern=required>
+                        <label for="fechaNacimiento">Fecha de nacimiento:</label>
+                        <input type="date" max="2007-03-22" id="fechaNacimiento" name="fechaNacimiento">
                     </div>
                 </fieldset>         
-            
+            <h2 class="tratamientotxt">Tratamiento de protección de Datos</h2>
             <div class="tratamiento">
             </div>
         </div>
@@ -59,6 +61,13 @@
                     <label for="CSS"><h3 class="h3">CSS</h3></label>
                     <input type="checkbox" id="JavaScript" name="JavaScript" value="JavaScript">
                     <label for="JavaScript"><h3 class="h3">JavaScript</h3></label>
+                </fieldset>
+                <fieldset>
+                    <legend> <h2>Elige jornada</h2></legend>
+                    <input type="radio" id="Mañana" name="Turno" value="Mañana">
+                    <label for="Mañana"><h3 class="h3">Mañana</h3></label>
+                    <input type="radio" id="Día completo" name="Turno" value="Día completo">
+                    <label for="Día completo"><h3 class="h3">Día completo</h3></label>
                 </fieldset>
             </section>
             <section id="grupo3">

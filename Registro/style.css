@@ -73,9 +73,9 @@ margin:0;
           }
           
                 .grupo {
-                                                                        /* Le doy al contenedor margin bottom para que los label aparezcabn separados, una alineacion vertical central  */
-                  margin-bottom: 15px;
+                                                                        /* Le doy al contenedor margin top para separar los labels y una alineacion vertical central  */
                   vertical-align: middle;
+                  margin-top: 25px;
                 }
 
                 input, textarea {
@@ -94,23 +94,28 @@ margin:0;
                                                                             /* Oscurezco las letras del checkbox porque se ven demasiado claras respecto al resto */
                   color: black;
                  }
+              .tratamientotxt{
+                                                                            /* Le coloco al texto un margen para mantener las secciones de la misma altura y alineo el texto al centro de su contenedor */
+                text-align: center;
+                margin-top: 40px;
+              }
               .tratamiento{
                                                                             /* El background es la imagen de tratamiento de datos, le doy tamaño para que ocupe el 100% en ambas longitudes, le redondeo las esquinas a juego con el resto de la web y la separo del contenedor superior, la coloco en el centro del contenedor y la posiciono relativa para poder manejarla en el espacio ya que se me desencuadró de su posición después de un cambio necesario en la estructura del formulario */
                 background-image: url(/Assets/Tratamiento-de-Datos.jpg);
                 background-size: contain;
                 background-repeat: no-repeat;
                 background-position: center;
-                height: 200px;
+                height: 150px;
                 width: 300px;
                 border-radius: 5%;
-                transition: transform 1s ease;   
-                
-                    
+                transition: transform 1s ease;  
+                margin-top: 40px;           
               }    
                     .tratamiento:hover {
                                                                             /* Hover suficiente para ver la imagen completa */
-                    transform: translate(200px, -200px) scale(2.5);
-                    }   
+                    transform: translate(150px, -150px) scale(2);
+                    }  
+               
           .secciones{
                                                                               /* Aplico a mis dos secciones un display column para que aparezcan sus elementos uno debajo del otro. */
             display: flex;
@@ -128,7 +133,7 @@ margin:0;
               #grupo2 { 
                                                                               /* Le doy a la segunda seccion color y transparencia, relleno y margen, la anchura deseada y esquinas redondeadas  */
                   background-color: rgb(95, 104, 187, 0.5);
-                  padding: 20px;
+                  /* padding: 20px; */
                   margin: 20px;
                   border-radius: 20px;
                   width: 300px;
@@ -140,7 +145,7 @@ margin:0;
                   margin: 20px;
                   border-radius: 20px;
                   width: 300px;
-                  margin-top: 50px;
+                  /* margin-top: 50px; */
                   }
                         .botones{
                                                                               /* Separo los botones de enviar y borrar de la parte superior */
