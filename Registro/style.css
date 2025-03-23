@@ -97,7 +97,7 @@ margin:0;
               .tratamientotxt{
                                                                             /* Le coloco al texto un margen para mantener las secciones de la misma altura y alineo el texto al centro de su contenedor */
                 text-align: center;
-                margin-top: 40px;
+                margin-top: 35px;
               }
               .tratamiento{
                                                                             /* El background es la imagen de tratamiento de datos, le doy tamaño para que ocupe el 100% en ambas longitudes, le redondeo las esquinas a juego con el resto de la web y la separo del contenedor superior, la coloco en el centro del contenedor y la posiciono relativa para poder manejarla en el espacio ya que se me desencuadró de su posición después de un cambio necesario en la estructura del formulario */
